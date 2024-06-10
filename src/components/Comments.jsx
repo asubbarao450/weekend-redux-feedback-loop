@@ -1,12 +1,11 @@
 import { useState } from 'react';
-
 import { useDispatch } from 'react-redux';
 import {useHistory} from 'react-router-dom';
 
-function Feeling() {
+function Comments() {
 
     //create a state to store the inputted feeling as string
-    const [feeling, setFeeling] = useState('')
+    const [comment, setComment] = useState('')
 
     const dispatch = useDispatch();
 
@@ -14,25 +13,25 @@ function Feeling() {
 
 
 
-    const setfeelingFunc = (event) => {
+    const setcommentFunc = (event) => {
         event.preventDefault();
 
 
         dispatch({
-            type: 'SET_FEELING',
-            payload: feeling
+            type: 'SET_COMMENT',
+            payload: comment
         })
 
 
-        history.push('/understand')
+        history.push('/review')
     }
 
     return (
         <>
-            <form onSubmit={setfeelingFunc}>
+            <form onSubmit={setcommentFunc}>
                 <h3>How are you feeling today?</h3>
                 <label>
-                    <input type="number" placeholder="feeling" value={feeling} onChange={(event) => setFeeling(event.target.value)} />
+                    <input type="number" placeholder="feeling" value={comment} onChange={(event) => setComment(event.target.value)} />
                 </label>
                 <button>Next</button>
             </form>
@@ -43,4 +42,4 @@ function Feeling() {
 }
 
 
-export default Feeling;
+export default Comments;

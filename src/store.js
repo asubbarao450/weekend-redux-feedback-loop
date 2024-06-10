@@ -1,73 +1,84 @@
 import { applyMiddleware, combineReducers, createStore } from 'redux';
 import logger from 'redux-logger';
 
-//needs if/switch statements for the store
+//stores the feedback as the 
 
-const feedback = (state = [], action) => {
-    if (action.type === `SET_FEEDBACK`) {
-  
-        // stores the new Feedback score from action.payload
-        const newFeedbackScore = action.payload;
+const feedback = (state = {}, action) => {
 
-        return [...state, newFeedbackScore]
-    }
-    return state;
-}
-
-const feeling = (state = [], action) => {
     if (action.type === `SET_FEELING`) {
-        
-        const newFeelingScore = action.payload;
+        return { ...state, feeling: action.payload }
 
-        return [...state, newFeelingScore]
     }
+
+    else if (action.type === `SET_UNDERSTANDING`) {
+        return { ...state, understanding: action.payload }
+    }
+
+    else if (action.type === `SET_SUPPORT`) {
+        return { ...state, support: action.payload }
+
+    }
+
+    else if (action.type === `SET_COMMENT`) {
+        return { ...state, comments: action.payload }
+
+    }
+
 
     return state;
 }
 
-const understanding = (state = [], action) => {
-    if (action.type === `SET_UNDERSTANDING`) {
-        const newFeelingScore = action.payload;
+// const feeling = (state = [], action) => {
+//     if (action.type === `SET_FEELING`) {
 
-        return [...state, newFeelingScore]
-    }
+//         const newFeelingScore = action.payload;
 
-    return state;
-}
+//         return [...state, newFeelingScore]
+//     }
 
-const support = (state = [], action) => {
-    if (action.type === `SET_SUPPORT`) {
-        const newFeelingScore = action.payload;
+//     return state;
+// }
 
-        return [...state, newFeelingScore]
-    }
+// const understanding = (state = [], action) => {
+//     if (action.type === `SET_UNDERSTANDING`) {
+//         const newFeelingScore = action.payload;
 
-    return state;
-}
+//         return [...state, newFeelingScore]
+//     }
 
-const comment = (state = [], action) => {
-    if (action.type === `SET_COMMENT`) {
-        const newFeelingScore = action.payload;
+//     return state;
+// }
 
-        return [...state, newFeelingScore]
-    }
+// const support = (state = [], action) => {
+//     if (action.type === `SET_SUPPORT`) {
+//         const newFeelingScore = action.payload;
 
-    return state;
-}
+//         return [...state, newFeelingScore]
+//     }
+
+//     return state;
+// }
+
+// const comment = (state = [], action) => {
+//     if (action.type === `SET_COMMENT`) {
+//         const newFeelingScore = action.payload;
+
+//         return [...state, newFeelingScore]
+//     }
+
+//     return state;
+// }
 
 const store = createStore(
     combineReducers({
-        feedback,
-        feeling,
-        understanding,
-        support,
-        comment
+        feedback
+
     }),
 
     applyMiddleware(
         logger
     )
 
-);
+)
 
 export default store;

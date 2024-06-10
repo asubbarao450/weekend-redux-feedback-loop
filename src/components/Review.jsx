@@ -6,30 +6,20 @@ function Review(){
 
 const review = useSelector((store)=> store.review)
 
-const dispatch = useDispatch();
+const history = useHistory()
+
+const feelings = useSelector((store) => )
+
+const understanding =
+
+const support =
+
+const comments =
+
+const feedback = 
 
 
-    useEffect (() => {
-        axios({
-            method: 'GET',
-            url: '/review'
-        }).then ((response) =>{
-
-            dispatch({
-                type: 'REVIEW',
-                payload: response.data
-            })
-
-        }).catch((error) => {
-
-            console.log(error)
-        })
-
-
-
-
-
-    })
+   
 
 }
 

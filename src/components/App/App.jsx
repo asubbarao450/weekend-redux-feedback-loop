@@ -2,6 +2,10 @@ import React from 'react';
 import axios from 'axios';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
+import Comments from "../Comments.jsx";
+import Feeling from "../Feeling.jsx";
+import Review from "../Review.jsx";
+import Supported from "../Supported.jsx";
 
 function App() {
 
