@@ -6,6 +6,7 @@ import Comments from "../Comments.jsx";
 import Feeling from "../Feeling.jsx";
 import Review from "../Review.jsx";
 import Supported from "../Supported.jsx";
+import Understanding from "../Understanding.jsx";
 
 function App() {
 
@@ -20,26 +21,23 @@ function App() {
         <h4>Don't forget it!</h4>
       </header>
       <Route exact path="/">
-      
+      <Feeling/>
       </Route>
 
-      <Route exact path="/feeling">
-      
-      </Route>
-
+    
       <Route exact path="/understand">
-      
+      <Understanding/>
       </Route>
 
       <Route exact path="/supported">
-      
+      <Supported/>
       </Route>
 
       <Route exact path="/comments">
-      
+      <Comments/>
       </Route>
       <Route exact path="/feedback">
-      
+      <Review/>
       </Route>
       </Router>
     </div>
