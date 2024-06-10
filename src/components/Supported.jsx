@@ -24,7 +24,6 @@ function Supported() {
             payload: supported
         })
 
-
         history.push('/comments')
 
         setSupported('')

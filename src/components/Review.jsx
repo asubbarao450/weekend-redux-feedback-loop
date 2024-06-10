@@ -10,7 +10,7 @@ const history = useHistory()
 
 const feedback = useSelector(store => store.feedback)
 
-const handleSubmit = (event) => {
+const handleSubmit = () => {
     event.preventDefault();
     
     axios.post(`/api/feedback`, feedback)
@@ -20,11 +20,26 @@ const handleSubmit = (event) => {
       })
       .catch( error => {
         console.log(error);
-        alert(`Sorry, couldn't add book at this time. Try again later`);
+        alert(`Sorry, couldn't add at this time. Try again later`);
       });
   }
 
+
+  return(
+    
+<>
+
+                <h3>Review</h3>
+                <label>
+                    
+                </label>
+                <button onClick={handleSubmit}>Submit</button>
+
+</>
+
+  )
 }
+
 
 
 

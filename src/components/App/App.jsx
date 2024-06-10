@@ -12,33 +12,33 @@ function App() {
 
 
 
-//The first step is to add a router to the 
+  //The first step is to add a router to the 
   return (
     <div className='App'>
       <Router>
-      <header className='App-header'>
-        <h1 className='App-title'>Feedback!</h1>
-        <h4>Don't forget it!</h4>
-      </header>
-      <Route exact path="/">
-      <Feeling/>
-      </Route>
+        <header className='App-header'>
+          <h1 className='App-title'>Feedback!</h1>
+          <h4>Don't forget it!</h4>
+        </header>
+        <Route exact path="/">
+          <Feeling />
+        </Route>
 
-    
-      <Route exact path="/understand">
-      <Understanding/>
-      </Route>
 
-      <Route exact path="/supported">
-      <Supported/>
-      </Route>
+        <Route exact path="/understand">
+          <Understanding />
+        </Route>
 
-      <Route exact path="/comments">
-      <Comments/>
-      </Route>
-      <Route exact path="/feedback">
-      <Review/>
-      </Route>
+        <Route exact path="/supported">
+          <Supported />
+        </Route>
+
+        <Route exact path="/comments">
+          <Comments />
+        </Route>
+        <Route exact path="/feedback">
+          <Review />
+        </Route>
       </Router>
     </div>
   );

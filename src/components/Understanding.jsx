@@ -14,7 +14,7 @@ function Understanding() {
 
 
     const setunderstandingFunc = (event) => {
-        event.preventDefault();
+        //event.preventDefault();
 
     //sends out the understnading message
         dispatch({
@@ -27,8 +27,11 @@ function Understanding() {
         history.push('/supported')
     }
 
+    //return consists of the input form with onSubmit and onChange
+    //the form takes in the value, placeholder and other functions
     return (
         <>
+        
             <form onSubmit={setUnderstanding}>
                 <h3>How well are you understanding the content?</h3>
                 <label>
