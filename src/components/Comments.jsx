@@ -14,7 +14,7 @@ function Comments() {
 
 
     const setcommentFunc = () => {
-        event.preventDefault();
+        
 
 
         dispatch({
@@ -22,8 +22,10 @@ function Comments() {
             payload: comment
         })
 
+        //sets the comment to null incase a user wants to cancel input 
         setComment('')
 
+        //pushes the user to the next page 
         history.push('/review')
     }
 
