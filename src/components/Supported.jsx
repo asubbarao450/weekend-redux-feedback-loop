@@ -34,9 +34,9 @@ function Supported() {
             <form onSubmit={setsupportedFunc}>
                 <h3>How well are you being supported today? </h3>
                 <label>
-                    <input type="text" placeholder="supported" value={supported} onChange={(event) => setSupported(event.target.value)} />
+                    <input data-testid="input" type="text" placeholder="supported" value={supported} onChange={(event) => setSupported(event.target.value)} />
                 </label>
-                <button onClick={setsupportedFunc}>Next</button>
+                <button data-testid="next" onClick={setsupportedFunc}>Next</button>
             </form>
 
         </>

@@ -1,7 +1,7 @@
 import { applyMiddleware, combineReducers, createStore } from 'redux';
 import logger from 'redux-logger';
 
-//stores the feedback as the 
+//stores the feedback as an object
 
 const feedback = (state = {}, action) => {
 

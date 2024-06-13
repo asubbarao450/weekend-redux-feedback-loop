@@ -35,9 +35,9 @@ function Understanding() {
             <form onSubmit={setunderstandingFunc}>
                 <h3>How well are you understanding the content?</h3>
                 <label>
-                    <input type="number" placeholder="understanding" value={understanding} onChange={(event) => setUnderstanding(event.target.value)} />
+                    <input data-testid="input" type="number" placeholder="understanding" value={understanding} onChange={(event) => setUnderstanding(event.target.value)} />
                 </label>
-                <button onClick={setunderstandingFunc}>Next</button>
+                <button data-testid="next" onClick={setunderstandingFunc}>Next</button>
             </form>
 
         </>

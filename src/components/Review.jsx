@@ -25,6 +25,8 @@ const handleSubmit = () => {
         console.log(error);
         alert(`Sorry, couldn't add at this time. Try again later`);
       });
+
+      history.push('/thanks')
   }
 
   //{allfeedback.map((feedback) => <li>{feedback}</li>)}
@@ -38,7 +40,7 @@ const handleSubmit = () => {
                 <li>Support: {allfeedback.support}</li>
                 <li>Comments: {allfeedback.comments}</li>
                 </ul>
-                <button onClick={handleSubmit}>Submit</button>
+                <button data-testid="next" onClick={handleSubmit}>Submit</button>
 
 </>
 

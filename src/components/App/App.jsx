@@ -7,6 +7,7 @@ import Feeling from "../Feeling.jsx";
 import Review from "../Review.jsx";
 import Supported from "../Supported.jsx";
 import Understanding from "../Understanding.jsx";
+import Thanks from "../Thanks.jsx";
 
 function App() {
 
@@ -43,6 +44,10 @@ function App() {
 
         <Route exact path="/review">
           <Review />
+        </Route>
+
+        <Route exact path="/thanks">
+          <Thanks/>
         </Route>
 
       </Router>

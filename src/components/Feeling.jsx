@@ -27,15 +27,15 @@ function Feeling() {
         history.push('/understand')
     }
 
-    //onSubmit={setfeelingFunc}
+   
     return (
         <>
             <form onSubmit={setfeelingFunc}>
                 <h3>How are you feeling today?</h3>
                 <label>
-                    <input type="number" placeholder="feeling" value={feeling} onChange={(event) => setFeeling(event.target.value)} />
+                    <input data-testid="input" type="number" placeholder="feeling" value={feeling} onChange={(event) => setFeeling(event.target.value)} />
                 </label>
-                <button onClick={setfeelingFunc}>Next</button>
+                <button data-testid="next" onClick={setfeelingFunc}>Next</button>
             </form>
 
         </>

@@ -32,9 +32,9 @@ function Comments() {
             <form onSubmit={setcommentFunc}>
                 <h3>Any comments you want to leave?</h3>
                 <label>
-                    <input type="text" placeholder="comments" value={comment} onChange={(event) => setComment(event.target.value)} />
+                    <input data-testid="input" type="text" placeholder="comments" value={comment} onChange={(event) => setComment(event.target.value)} />
                 </label>
-                <button onClick={setcommentFunc}>Next</button>
+                <button data-testid="next" onClick={setcommentFunc}>Next</button>
             </form>
 
         </>
