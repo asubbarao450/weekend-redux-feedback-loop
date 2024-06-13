@@ -13,7 +13,7 @@ function Understanding() {
     const history = useHistory();
 
 
-    const setunderstandingFunc = (event) => {
+    const setunderstandingFunc = () => {
         //event.preventDefault();
 
     //sends out the understnading message
@@ -32,10 +32,10 @@ function Understanding() {
     return (
         <>
         
-            <form onSubmit={setUnderstanding}>
+            <form onSubmit={setunderstandingFunc}>
                 <h3>How well are you understanding the content?</h3>
                 <label>
-                    <input type="number" placeholder="understanding" value={understanding} onChange={(event) => setunderstandingFunc(event.target.value)} />
+                    <input type="number" placeholder="understanding" value={understanding} onChange={(event) => setUnderstanding(event.target.value)} />
                 </label>
                 <button onClick={setunderstandingFunc}>Next</button>
             </form>

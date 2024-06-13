@@ -13,8 +13,8 @@ function Feeling() {
 
 
 
-    const setfeelingFunc = (event) => {
-        event.preventDefault();
+    const setfeelingFunc = () => {
+       // event.preventDefault();
 
 
         dispatch({
@@ -22,10 +22,12 @@ function Feeling() {
             payload: feeling
         })
 
+        setFeeling('')
 
         history.push('/understand')
     }
 
+    //onSubmit={setfeelingFunc}
     return (
         <>
             <form onSubmit={setfeelingFunc}>
@@ -33,7 +35,7 @@ function Feeling() {
                 <label>
                     <input type="number" placeholder="feeling" value={feeling} onChange={(event) => setFeeling(event.target.value)} />
                 </label>
-                <button>Next</button>
+                <button onClick={setfeelingFunc}>Next</button>
             </form>
 
         </>

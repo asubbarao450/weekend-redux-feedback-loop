@@ -15,7 +15,7 @@ function Supported() {
     const history = useHistory();
 
 
-    const setsupportedFunc = (event) => {
+    const setsupportedFunc = () => {
         event.preventDefault();
 
 
@@ -32,9 +32,9 @@ function Supported() {
     return (
         <>
             <form onSubmit={setsupportedFunc}>
-                <h3>How well are you understanding the content?</h3>
+                <h3>How well are you being supported today? </h3>
                 <label>
-                    <input type="number" placeholder="supported" value={supported} onChange={(event) => setSupported(event.target.value)} />
+                    <input type="text" placeholder="supported" value={supported} onChange={(event) => setSupported(event.target.value)} />
                 </label>
                 <button onClick={setsupportedFunc}>Next</button>
             </form>

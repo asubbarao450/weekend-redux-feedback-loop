@@ -13,7 +13,7 @@ function Comments() {
 
 
 
-    const setcommentFunc = (event) => {
+    const setcommentFunc = () => {
         event.preventDefault();
 
 
@@ -22,6 +22,7 @@ function Comments() {
             payload: comment
         })
 
+        setComment('')
 
         history.push('/review')
     }
@@ -29,11 +30,11 @@ function Comments() {
     return (
         <>
             <form onSubmit={setcommentFunc}>
-                <h3>How are you feeling today?</h3>
+                <h3>Any comments you want to leave?</h3>
                 <label>
-                    <input type="number" placeholder="feeling" value={comment} onChange={(event) => setComment(event.target.value)} />
+                    <input type="text" placeholder="comments" value={comment} onChange={(event) => setComment(event.target.value)} />
                 </label>
-                <button>Next</button>
+                <button onClick={setcommentFunc}>Next</button>
             </form>
 
         </>

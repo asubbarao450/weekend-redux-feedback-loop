@@ -29,6 +29,10 @@ function App() {
           <Understanding />
         </Route>
 
+        {/* <Route exact path="/admin">
+          <Admin/>
+        </Route> */}
+
         <Route exact path="/supported">
           <Supported />
         </Route>
@@ -36,9 +40,11 @@ function App() {
         <Route exact path="/comments">
           <Comments />
         </Route>
-        <Route exact path="/feedback">
+
+        <Route exact path="/review">
           <Review />
         </Route>
+
       </Router>
     </div>
   );

@@ -1,19 +1,22 @@
-import { useEffect } from 'react';
+//import { useEffect } from 'react';
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
+import {useHistory} from 'react-router-dom';
 
 function Review(){
 
-
 const history = useHistory()
 
+//feedback is the variable that will store the stuff from 
+//the store 
+const allfeedback = useSelector(store => store.feedback)
 
-const feedback = useSelector(store => store.feedback)
+console.log(allfeedback)
 
 const handleSubmit = () => {
     event.preventDefault();
     
-    axios.post(`/api/feedback`, feedback)
+    axios.post(`/api/feedback`, allfeedback)
       .then(response => {
         
         
@@ -24,15 +27,17 @@ const handleSubmit = () => {
       });
   }
 
-
+  //{allfeedback.map((feedback) => <li>{feedback}</li>)}
   return(
     
 <>
-
-                <h3>Review</h3>
-                <label>
-                    
-                </label>
+                <h3>Review Your Feedback</h3>
+                <ul>
+                <li>Feeling: {allfeedback.feeling}</li>
+                <li>Understanding: {allfeedback.understanding}</li>
+                <li>Support: {allfeedback.support}</li>
+                <li>Comments: {allfeedback.comments}</li>
+                </ul>
                 <button onClick={handleSubmit}>Submit</button>
 
 </>
